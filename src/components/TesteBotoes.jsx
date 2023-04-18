@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import "./teste.css"
 
-const Teste = () => {
+const TesteBotoes = () => {
 
   // dia da semana
 
@@ -164,7 +164,7 @@ useSetDiaSemana(handleSetDiaSemana(), handleGetSemana())
   return (
     <div>
       <div className='container'>
-        <p><span>Lista de exercícios</span></p>  
+        <p><span className='titulo'>Lista de Exercícios</span></p>  
         <div className='box'>          
           <table class="table table-hover">          
             <thead>
@@ -180,36 +180,36 @@ useSetDiaSemana(handleSetDiaSemana(), handleGetSemana())
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td id='sem1Seg' ref={elementoRefSem1Seg}>{semanaA.letra}</td>
-                <td id='sem1Ter' ref={elementoRefSem1Ter}> <input type='button' id='botoes' onClick={handleGetValue} value={semanaB.letra}/></td>
-                <td id='sem1Qua' ref={elementoRefSem1Qua}>{semanaC.letra}</td>
-                <td id='sem1Qui' ref={elementoRefSem1Qui}>{semanaD.letra}</td>
-                <td id='sem1Sex' ref={elementoRefSem1Sex}>{semanaA.letra}</td>
+                <td id='sem1Seg' ref={elementoRefSem1Seg} data-toggle="modal" data-target="#ExModalA">{semanaA.letra}</td>
+                <td id='sem1Ter' ref={elementoRefSem1Ter} data-toggle="modal" data-target="#ExModalB" >{semanaB.letra} </td>
+                <td id='sem1Qua' ref={elementoRefSem1Qua} data-toggle="modal" data-target="#ExModalC">{semanaC.letra}</td>
+                <td id='sem1Qui' ref={elementoRefSem1Qui} data-toggle="modal" data-target="#ExModalD">{semanaD.letra}</td>
+                <td id='sem1Sex' ref={elementoRefSem1Sex} data-toggle="modal" data-target="#ExModalA">{semanaA.letra}</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td id='sem2Seg' ref={elementoRefSem2Seg} data-toggle="modal" data-target="#ExemploModalCentralizado">{semanaB.letra}</td>
-                <td id='sem2Ter' ref={elementoRefSem2Ter} data-toggle="modal" data-target="#ExemploModalCentralizado">{semanaC.letra}</td>
-                <td id='sem2Qua' ref={elementoRefSem2Qua} data-toggle="modal" data-target="#ExemploModalCentralizado"><span>{semanaD.letra}</span>                  
+                <td id='sem2Seg' ref={elementoRefSem2Seg} data-toggle="modal" data-target="#ExModalB">{semanaB.letra}</td>
+                <td id='sem2Ter' ref={elementoRefSem2Ter} data-toggle="modal" data-target="#ExModalC">{semanaC.letra}</td>
+                <td id='sem2Qua' ref={elementoRefSem2Qua} data-toggle="modal" data-target="#ExModalD"><span>{semanaD.letra}</span>                  
                 </td>
-                <td id='sem2Qui' ref={elementoRefSem2Qui} data-toggle="modal" data-target="#ExemploModalCentralizado">{semanaA.letra}</td>
-                <td id='sem2Sex' ref={elementoRefSem2Sex} data-toggle="modal" data-target="#ExemploModalCentralizado">{semanaB.letra}</td>
+                <td id='sem2Qui' ref={elementoRefSem2Qui} data-toggle="modal" data-target="#ExModalA">{semanaA.letra}</td>
+                <td id='sem2Sex' ref={elementoRefSem2Sex} data-toggle="modal" data-target="#ExModalB">{semanaB.letra}</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td id='sem3Seg' ref={elementoRefSem3Seg}>{semanaC.letra}</td>
-                <td id='sem3Ter' ref={elementoRefSem3Ter}>{semanaD.letra}</td>
-                <td id='sem3Qua' ref={elementoRefSem3Qua}>{semanaA.letra}</td>
-                <td id='sem3Qui' ref={elementoRefSem3Qui}>{semanaB.letra}</td>
-                <td id='sem3Sex' ref={elementoRefSem3Sex}>{semanaC.letra}</td>
+                <td id='sem3Seg' ref={elementoRefSem3Seg} data-toggle="modal" data-target="#ExModalC">{semanaC.letra}</td>
+                <td id='sem3Ter' ref={elementoRefSem3Ter} data-toggle="modal" data-target="#ExModalD">{semanaD.letra}</td>
+                <td id='sem3Qua' ref={elementoRefSem3Qua} data-toggle="modal" data-target="#ExModalA">{semanaA.letra}</td>
+                <td id='sem3Qui' ref={elementoRefSem3Qui} data-toggle="modal" data-target="#ExModalB">{semanaB.letra}</td>
+                <td id='sem3Sex' ref={elementoRefSem3Sex} data-toggle="modal" data-target="#ExModalC">{semanaC.letra}</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td id='sem4Seg' ref={elementoRefSem4Seg}>{semanaD.letra}</td>
-                <td id='sem4Ter' ref={elementoRefSem4Ter}>{semanaA.letra}</td>
-                <td id='sem4Qua' ref={elementoRefSem4Qua}>{semanaB.letra}</td>
-                <td id='sem4Qui' ref={elementoRefSem4Qui}>{semanaC.letra}</td>
-                <td id='sem4Sex' ref={elementoRefSem4Sex}>{semanaD.letra}</td>
+                <td id='sem4Seg' ref={elementoRefSem4Seg} data-toggle="modal" data-target="#ExModalD">{semanaD.letra}</td>
+                <td id='sem4Ter' ref={elementoRefSem4Ter} data-toggle="modal" data-target="#ExModalA">{semanaA.letra}</td>
+                <td id='sem4Qua' ref={elementoRefSem4Qua} data-toggle="modal" data-target="#ExModalB">{semanaB.letra}</td>
+                <td id='sem4Qui' ref={elementoRefSem4Qui} data-toggle="modal" data-target="#ExModalC">{semanaC.letra}</td>
+                <td id='sem4Sex' ref={elementoRefSem4Sex} data-toggle="modal" data-target="#ExModalD">{semanaD.letra}</td>
               </tr>              
             </tbody>
           </table>
@@ -219,4 +219,4 @@ useSetDiaSemana(handleSetDiaSemana(), handleGetSemana())
   )
 }
 
-export default Teste
+export default TesteBotoes

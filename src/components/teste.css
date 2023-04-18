@@ -18,7 +18,18 @@
 
 
 .diaSemana{
-    background-color: blueviolet;
-    border: 1px solid;
+    background-color: blueviolet;    
+    border: 1px solid;      
     color: white;
+    cursor: pointer; 
+       
 }
+
+.titulo{
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+
